@@ -1,0 +1,26 @@
+<div class="note-container" [formGroup]="agencyForm">
+    <mat-form-field>
+      <input matInput placeholder="Nombre de agencia" formControlName="name" value={{agency.agencia}} required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea matInput placeholder="Direccion" formControlName="address" value={{agency.direccion}} required cdkTextareaAutosize></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Distrito" formControlName="name" value={{agency.distrito}} required>
+      </mat-form-field>
+      <br> 
+      <mat-form-field>
+        <input matInput placeholder="Latitud" formControlName="name" value={{agency.lat}} required>
+      </mat-form-field>
+      <br>  
+      <mat-form-field>
+        <input matInput placeholder="Longitud" formControlName="name" value={{agency.lon}} required>
+      </mat-form-field>
+      <br>
+  </div>
+  <br>
+  <br>
+  <div class="text-right">
+    <button mat-raised-button color="primary" (click)="addAgency()">Actualizar</button>
+  </div>

@@ -1,0 +1,12 @@
+
+  <div class="agencies" *ngIf="agencies$ | async as agencies; else notFound">
+    <app-agency-card *ngFor="let agency of agencies" [agency] = "agency" [routerLink]="['/agencies', agency.id]">
+    </app-agency-card>
+  </div>
+  <ng-template #notFound>
+    <mat-card>
+      <mat-card-title>
+        Either you have no agencies
+      </mat-card-title>
+    </mat-card>
+  </ng-template>
